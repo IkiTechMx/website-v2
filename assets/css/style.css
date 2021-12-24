@@ -525,7 +525,7 @@ section {
   height: 100%;
 }
 .values .box img {
-  padding: 30px 50px;
+  padding: 5px 10px;
   transition: 0.5s;
   transform: scale(1.1);
 }
