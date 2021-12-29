@@ -37,6 +37,37 @@
 
 <body>
 
+  <!-- Messenger plugin del chat Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your plugin del chat code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "625544177608637");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v12.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -444,7 +475,7 @@
             <div class="service-box purple">
               <i class="bi bi-graph-up icon"></i>
               <h3>Analítica de datos</h3>
-              <p><strong>Toma de mejores decisiones más rápido</strong>. La disponibilidad de grandes volúmenes de datos fortalecerá los procesos de toma de decisiones. serán más certeras y podra obtener resultados en tiempo real, además reduce costes, las soluciones de big data ofrecen ventajas económicas, ayuda a crear nuevos productos y servicios y permite anticiparse a lo que necesitan los consumidores.
+              <p><strong>Toma de mejores decisiones más rápido</strong>. La disponibilidad de grandes volúmenes de datos fortalecerá los procesos de toma de decisiones. serán más certeras y podrá obtener resultados en tiempo real, además reduce costes, las soluciones de big data ofrecen ventajas económicas, ayuda a crear nuevos productos y servicios y permite anticiparse a lo que necesitan los consumidores.
               </p>
               <!-- <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a> -->
             </div>
@@ -633,7 +664,9 @@
   <!-- End of HubSpot Embed Code -->
 
   <!-- Start of Zoho Embed Code -->
-  <script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"cd8e06a131a07f34e68458ec4685a904762206fe8c69dde693e9dc67771cd61b", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+  <script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"cd8e06a131a07f34e68458ec4685a904762206fe8c69dde693e9dc67771cd61b", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
+    </script>
   <!-- End of Zoho Embed Code -->
 </body>
 
